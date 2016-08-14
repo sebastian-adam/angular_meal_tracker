@@ -51,6 +51,8 @@ export class MealListComponent {
     this.mealList.push(
       new Meal(name, description, image, calories, sodium, sugar, this.mealList.length)
     );
+    console.log(this.mealList);
+    this.filterHealthful = "all";
   }
   onChange(filterOption) {
     this.filterHealthful = filterOption;

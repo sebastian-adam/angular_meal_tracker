@@ -25,7 +25,7 @@ export class NewMealComponent {
     this.onSubmitNewMeal.emit({name: inputName.value,
        description: inputDescription.value,
        image: inputImage.value,
-       calories: parseInt(inputImage.value),
+       calories: parseInt(inputCalories.value),
        sodium: parseInt(inputSodium.value),
        sugar: parseInt(inputSugar.value)});
     inputName.value = '';
