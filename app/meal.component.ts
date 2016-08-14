@@ -6,7 +6,7 @@ import { Meal } from './meal.model';
   inputs: ['meal'],
   template: `
   <div>
-    <h3>{{ meal.image }}</h3>
+    <img src="{{ meal.image }}" alt="photo of {{ meal.name }}">
     <h3>{{ meal.name }}</h3>
     <h3>{{ meal.description }}</h3>
     <ul>
