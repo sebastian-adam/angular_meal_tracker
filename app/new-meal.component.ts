@@ -5,7 +5,7 @@ import {Component, EventEmitter} from 'angular2/core';
   outputs: ['onSubmitNewMeal'],
   template:`
   <div class="meal-form">
-    <h3>Add Meal:</h3>
+    <h3 class="add-meal">Add Meal:</h3>
     <input type="text" placeholder="Name" class="" #newName>
     <input type="text" placeholder="Description" class="" #newDescription>
     <input type="text" placeholder="Image" class="" #newImage>

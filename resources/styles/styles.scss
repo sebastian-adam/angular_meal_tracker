@@ -1,8 +1,8 @@
-$variable : rgba(163,174,134,.9);
-
-.class {
-  color: $variable;
-}
+$main-font : 'Montserrat', sans-serif;
+$olive : rgba(163,174,134,.9);
+$mustard : rgba(255,220,115,.9);
+$lightmustard : rgba(255,220,115,.3);
+$purple : rgba(120,41,63,.9);
 
 @mixin flexbox() {
    display: -webkit-box;
@@ -28,20 +28,90 @@ $variable : rgba(163,174,134,.9);
    order: $val;
  }
 
- .flexbox {
-   @include flexbox();
-   justify-content: space-between;
-   flex-wrap: wrap;
-   flex-direction: row;
+#title {
+  font-family: $main-font;
+  font-size: 6em;
+  color: $olive;
+}
+
+.header-container {
+  padding: 30px;
+}
+
+.add-meal, .edit-meal {
+  float: left;
+}
+
+.meal-form, .meal-form-edit {
+  width: 50%;
+}
+
+.inputs-container {
+  padding-left: 12.5%;
+}
+
+input, button {
+  clear: both;
+  display: block;
+  margin: 5px 0;
+  width: 500px;
+}
+
+button {
+  width:250px;
+  background-color: $olive;
+}
+
+.meal-container, .header-container, .inputs-container {
+  background-color: $mustard;
+  @include flexbox();
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.meal-item, .input-item {
+  @include flex(1);
+  height: 150px;
+  margin: 30px 30px 0;
+  text-align: center;
  }
 
- .flex {
-   @include flex(1 300px);
-   height: 100px;
-   margin: 10px;
-   text-align: center;
+.input-item {
+  height: 200px;
+  margin: 30px 30px 20px;
+}
+
+.meal-item {
+  margin-top: 100px;
+}
+
+.meal-name, li {
+  color: $purple;
+}
+
+h4 {
+  text-align: justify;
+}
+
+li {
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.middle-li {
+  margin: auto 10%;
+}
+
+.selected {
+  border-top-left-radius: 10em;
+  border-top-right-radius: 10em;
+  background-color: $purple;
  }
 
- .selected {
-   color: red;
- }
+.sticky-bar, .body:after {
+  height: 142px;
+}
+.sticky-bar {
+  background: orange;
+}
