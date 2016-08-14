@@ -11,7 +11,7 @@ This app allows a dieting user to log cheat meals they've eaten each day, includ
 
 
 ## Setup
-- git clone https://github.com/sprokusk/angular_meal_tracker.git
+- $ git clone https://github.com/sprokusk/angular_meal_tracker.git
 - $ npm install
 - $ bower install
 - install globals if needed (gulp, bower, sass, typescript, typescript packages.)
