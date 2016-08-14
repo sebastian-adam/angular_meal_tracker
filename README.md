@@ -1,4 +1,4 @@
-# _Angular Cheat Meal Meal Tracker_
+# _Angular Cheat Meal Tracker_
 
 #### ANGULAR JS Independent Project
 Angular 2 app for Epicodus 08.13.2016
@@ -37,10 +37,10 @@ This app allows a dieting user to log cheat meals they've eaten each day, includ
 
 ## Technologies
 * Angular 2
+* Typescript
 * Gulp
 * Bower
 * Sass
-* HTML
 
 ## Legal
 Copyright (c) 2016 **_{Sebastian Prokuski}_**
