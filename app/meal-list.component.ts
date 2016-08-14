@@ -30,7 +30,7 @@ import { HealthfulPipe } from './healthful.pipe';
     </meal-display>
   </div>
   <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal"></edit-meal-details>
-  <new-meal (onSubmitNewMeal)="createMeal($event.name, $event.description, $event.calories, $event.sodium, $event.sugar)"></new-meal>
+  <new-meal (onSubmitNewMeal)="createMeal($event.name, $event.description, $event.image, $event.calories, $event.sodium, $event.sugar)"></new-meal>
   `
 })
 export class MealListComponent {
@@ -43,9 +43,9 @@ export class MealListComponent {
     console.log(clickedMeal);
     this.selectedMeal = clickedMeal;
   }
-  createMeal(name: string,  description: string,  calories: number,  sodium: number, sugar: number): void {
+  createMeal(name: string, description: string, image: string, calories: number, sodium: number, sugar: number): void {
     this.mealList.push(
-      new Meal(name, description, calories, sodium, sugar, this.mealList.length)
+      new Meal(name, description, image, calories, sodium, sugar, this.mealList.length)
     );
   }
   onChange(filterOption) {

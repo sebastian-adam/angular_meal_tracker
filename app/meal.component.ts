@@ -21,7 +21,7 @@ export class MealComponent {
   public meal: Meal;
   healthful(){
     if (this.meal.calories < 500) {
-      this.meal.healthful = false;
+      this.meal.healthful = true;
     }
   }
 }

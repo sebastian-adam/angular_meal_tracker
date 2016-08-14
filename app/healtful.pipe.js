@@ -11,33 +11,43 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var MealComponent;
+    var HealthfulPipe;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            MealComponent = (function () {
-                function MealComponent() {
+            HealthfulPipe = (function () {
+                function HealthfulPipe() {
                 }
-                MealComponent.prototype.healthful = function () {
-                    if (this.meal.calories < 500) {
-                        this.meal.healthful = true;
+                HealthfulPipe.prototype.transform = function (input, args) {
+                    var desiredCalories = args[0];
+                    if (desiredCalories === 'not-healthful') {
+                        return input.filter(function (meal) {
+                            return !meal.healthful;
+                        });
+                    }
+                    else if (desiredCalories === "healthful") {
+                        return input.filter(function (meal) {
+                            return meal.healthful;
+                        });
+                    }
+                    else {
+                        return input;
                     }
                 };
-                MealComponent = __decorate([
-                    core_1.Component({
-                        selector: 'meal-display',
-                        inputs: ['meal'],
-                        template: "\n  <div>\n    <image src={{ '\"' meal.image '\"' }} alt=\"photo of {{ meal.name }}\">\n    <h3>{{ meal.name }}</h3>\n    <h3>{{ meal.description }}</h3>\n    <ul>\n      <li>{{ \"Calories: \" + meal.calories }}</li>\n      <li>{{ \"Sodium: \" + meal.sodium + \"mg\" }}</li>\n      <li>{{ \"Sugar: \" + meal.calories + \"g\" }}</li>\n    </ul>\n  </div>\n  "
+                HealthfulPipe = __decorate([
+                    core_1.Pipe({
+                        name: "heathful",
+                        pure: true
                     }), 
                     __metadata('design:paramtypes', [])
-                ], MealComponent);
-                return MealComponent;
+                ], HealthfulPipe);
+                return HealthfulPipe;
             }());
-            exports_1("MealComponent", MealComponent);
+            exports_1("HealthfulPipe", HealthfulPipe);
         }
     }
 });
-//# sourceMappingURL=meal.component.js.map
+//# sourceMappingURL=healtful.pipe.js.map

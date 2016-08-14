@@ -14,7 +14,7 @@ System.register([], function(exports_1, context_1) {
                     this.sodium = sodium;
                     this.sugar = sugar;
                     this.id = id;
-                    this.healthful = true;
+                    this.healthful = false;
                 }
                 return Meal;
             }());
