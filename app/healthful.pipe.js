@@ -39,7 +39,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 };
                 HealthfulPipe = __decorate([
                     core_1.Pipe({
-                        name: "heathful",
+                        name: "healthful",
                         pure: true
                     }), 
                     __metadata('design:paramtypes', [])

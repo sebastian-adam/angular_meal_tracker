@@ -23,7 +23,7 @@ import { HealthfulPipe } from './healthful.pipe';
     </div>
   </div>
   <div class="meal-container">
-    <meal-display class="meal" *ngFor="#currentMeal of mealList | healthful:filterHealthfulChoices"
+    <meal-display class="meal" *ngFor="#currentMeal of mealList | healthful:filterHealthful"
       (click)="mealClicked(currentMeal)"
       [class.selected]="currentMeal === selectedMeal"
       [meal]="currentMeal">
@@ -36,7 +36,7 @@ import { HealthfulPipe } from './healthful.pipe';
 export class MealListComponent {
   public mealList: Meal[];
   public selectedMeal: Meal;
-  public filterHealthfulChoices: string = "healthful";
+  public filterHealthful: string = "not-healthful";
   constructor() {
   }
   mealClicked(clickedMeal: Meal): void {
@@ -49,7 +49,7 @@ export class MealListComponent {
     );
   }
   onChange(filterOption) {
-    this.filterHealthfulChoices = filterOption;
-    console.log(this.filterHealthfulChoices);
+    this.filterHealthful = filterOption;
+    console.log(this.filterHealthful);
   }
 }
