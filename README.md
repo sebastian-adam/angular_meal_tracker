@@ -1,4 +1,4 @@
-# _Angular Meal Tracker_
+# _Angular Cheat Meal Meal Tracker_
 
 #### ANGULAR JS Independent Project
 Angular 2 app for Epicodus 08.13.2016
@@ -7,7 +7,7 @@ Angular 2 app for Epicodus 08.13.2016
 ***
 
 ## Description
-This app allows a user to log foods they've eaten each day, including details about the meal and its number of calories.
+This app allows a dieting user to log cheat meals they've eaten each day, including details about the meal and its number of calories, sodium, and sugar.
 
 
 ## Setup

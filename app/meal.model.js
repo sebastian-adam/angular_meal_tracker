@@ -6,9 +6,10 @@ System.register([], function(exports_1, context_1) {
         setters:[],
         execute: function() {
             Meal = (function () {
-                function Meal(name, description, calories, sodium, sugar, id) {
+                function Meal(name, description, image, calories, sodium, sugar, id) {
                     this.name = name;
                     this.description = description;
+                    this.image = image;
                     this.calories = calories;
                     this.sodium = sodium;
                     this.sugar = sugar;
