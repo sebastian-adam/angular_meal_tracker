@@ -31,7 +31,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                         selector: 'meal-display',
                         inputs: ['meal'],
                         template: "\n  <div>\n    <image src={{ '\"' meal.image '\"' }} alt=\"photo of {{ meal.name }}\">\n    <h3>{{ meal.name }}</h3>\n    <h3>{{ meal.description }}</h3>\n    <ul>\n      <li>{{ \"Calories: \" + meal.calories }}</li>\n      <li>{{ \"Sodium: \" + meal.sodium + \"mg\" }}</li>\n      <li>{{ \"Sugar: \" + meal.calories + \"g\" }}</li>\n    </ul>\n  </div>\n  "
-                    }),
+                    }), 
                     __metadata('design:paramtypes', [])
                 ], MealComponent);
                 return MealComponent;
