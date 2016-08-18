@@ -40,7 +40,7 @@ import { HealthfulPipe } from './healthful.pipe';
 export class MealListComponent {
   public mealList: Meal[];
   public selectedMeal: Meal;
-  public filterHealthful: string = "not-healthful";
+  public filterHealthful: string = "all";
   constructor() {
   }
   mealClicked(clickedMeal: Meal): void {
